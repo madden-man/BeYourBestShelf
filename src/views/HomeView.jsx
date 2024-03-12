@@ -8,11 +8,11 @@ export const HomeView = () => {
         <div>
 
             <SearchBar />
-            {shelves.map((shelf) => {
-                <div>
+            {shelves.map((shelf) =>
+                <div id="volumes">
                     {shelf}
                 </div>
-            })}
+            )}
         </div>
-    )
+    );
 }
