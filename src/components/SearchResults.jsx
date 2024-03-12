@@ -6,12 +6,13 @@ export const SearchResults = ({ results }) => {
         console.log(result);
     }
 
+    if (!results || results.length === 0) return;
+
     return (
         <div className="search__results">
-            {results.map(({ volumeInfo: { title }}) =>
-            <div className="search__result" key={title}>
+            {results.slice(0, 5).map(({ volumeInfo: { title }}) =>
+            <div className="search__result" key={title} tabIndex={0}>
                 <span>{title.substring(0, 30)}{title.length > 30 && '...'}</span>
-                <button onClick={(e) => addToShelf(title)} className="search__plus">+</button>
             </div>)}
         </div>
     )
