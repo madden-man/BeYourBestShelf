@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
 
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .search {
     display: flex;
     flex-direction: column;
@@ -8,15 +14,15 @@
 }
 
 
-.search__results {
+.results {
     display: flex;
     flex-direction: column;
     max-width: 450px;
     color: white;
-    transition: width 0.5s, height 1s;
+    margin: 0 0.5rem;
 }
 
-.search__result {
+.results__item {
     background: #019ca8;
     border-radius: 8px;
     border: 1px ridge black;
@@ -26,17 +32,24 @@
     letter-spacing: 0.1em;
     font-family: 'Inconsolata', monospace;
     padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s;
+
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.6);
+        text-shadow: 0 0 10px #3a3b3c;
+    }
 }
 
-.search__result:hover {
-    cursor: pointer;
+.results__author {
+    font-size: 10px;
 }
-
-.search__result:focus {
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.6);
-    text-shadow: 0 0 10px black;
-}
-
 
 
 /* all the search bar shtuff */

@@ -6,7 +6,6 @@ export const HomeView = () => {
 
     return (
         <div>
-
             <SearchBar />
             {shelves.map((shelf) =>
                 <div id="volumes">
