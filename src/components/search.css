@@ -6,6 +6,11 @@ html, body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .search {
     display: flex;
     flex-direction: column;
@@ -164,20 +169,25 @@ html, body {
     right: -250px;
     background: #151515;
     z-index: 6;
-    &::before {
-      top: 0;
-      left: 0;
-      width: 25px;
-    }
-    &::after {
-      top: 0;
-      left: 0;
-      width: 25px;
-      height: 2px;
-      border: none;
-      background: white;
-      border-radius: 0%;
-      transform: rotate(-45deg);
+        &::before {
+            top: 0;
+            left: 0;
+            width: 25px;
+        }
+
+        &::after {
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 2px;
+            border: none;
+            background: white;
+            border-radius: 0%;
+            transform: rotate(-45deg);
+        }
     }
 }
+
+.search__container .search__input.search__input--active:hover {
+    cursor: text;
 }

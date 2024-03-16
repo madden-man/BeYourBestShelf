@@ -1,12 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import { HomeView } from './views/HomeView';
+import AppRouter from './utils/AppRouter';
 
 function App() {
   return (
-    <div className="App">
-      <HomeView />
-    </div>
+    <AppRouter />
   );
 }
 
