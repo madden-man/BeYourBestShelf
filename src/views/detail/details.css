@@ -1,0 +1,16 @@
+.details__cta {
+    align-self: center;
+    background: #019ca8;
+    border-radius: 2em;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: inline-block;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    margin: 1rem .3em 2rem 0;
+    padding: .5em 1.6em;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s;
+    cursor: pointer;
+}

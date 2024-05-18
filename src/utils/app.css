@@ -1,0 +1,13 @@
+.app {
+    max-width: 565px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}

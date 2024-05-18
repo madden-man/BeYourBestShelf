@@ -52,6 +52,15 @@ a {
     }
 }
 
+.search__homelogo {
+    width: 160px;
+    height: 40px;
+    position: absolute;
+    left: -16px;
+    top: 32px;
+    cursor: pointer;
+}
+
 .results__author {
     font-size: 10px;
 }

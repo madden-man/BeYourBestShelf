@@ -1,0 +1,61 @@
+export const shelfMap = [{
+    leftX: 218,
+    rightX: 233
+}, {
+    leftX: 233,
+    rightX: 255
+}, {
+    leftX: 199,
+    rightX: 218
+}, {
+    leftX: 255,
+    rightX: 275
+}, {
+    leftX: 177,
+    rightX: 199
+}, {
+    leftX: 275,
+    rightX: 295
+}, {
+    leftX: 158,
+    rightX: 177
+}, {
+    leftX: 295,
+    rightX: 307
+}, {
+    leftX: 139,
+    rightX: 158
+}, {
+    leftX: 307,
+    rightX: 330
+}, {
+    leftX: 125,
+    rightX: 139
+}, {
+    leftX: 330,
+    rightX: 350
+}, {
+    leftX: 104,
+    rightX: 125
+}, {
+    leftX: 350,
+    rightX: 370
+}, {
+    leftX: 86,
+    rightX: 104
+}, {
+    leftX: 370,
+    rightX: 387
+}, {
+    leftX: 64,
+    rightX: 86
+}, {
+    leftX: 387,
+    rightX: 401
+}, {
+    leftX: 49,
+    rightX: 64
+}, {
+    leftX: 401,
+    rightX: 430
+}];

@@ -5,11 +5,15 @@ import { bookSearch } from '../utils/api';
 import { SearchResults } from './SearchResults';
 
 import './search.css';
+import { useDispatch } from "react-redux";
+import { detailsCleared } from "../views/detail/state/actions";
 
-export const SearchBar = () => {
+export const SearchBar = ({ withBackButton }) => {
     const [term, setTerm] = useState('');
     const [resultsOpen, setResultsOpen] = useState(false);
     const [searchResults, setSearchResults] = useState([]);
+
+    const dispatch = useDispatch();
 
     const onSearch = async (term) => {
         setTerm(term);
@@ -42,6 +46,12 @@ export const SearchBar = () => {
     return (
         <div className="search">
             <div className="search__bar">
+                {withBackButton && <img
+                    src={require(`../assets/shelf__black.png`)}
+                    alt="bookshelf map"
+                    className="search__homelogo"
+                    onClick={() => dispatch(detailsCleared())}
+                />}
                 <div className="search__container">
                     <input
                         type="text"

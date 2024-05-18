@@ -1,0 +1,62 @@
+.shelf {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.shelf__img {
+    width: 500px;
+}
+
+.shelf__volumes {
+    display: flex;
+    flex-direction: row;
+}
+
+.shelf__volume {
+    display: flex;
+    flex-direction: column;
+}
+
+.shelf__tooltip {
+    position: absolute;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
+    border: 4px ridge darkblue;
+    z-index: 3000;
+    background: white;
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
+
+.shelf__tooltip h2 {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.shelf__tooltip span {
+    font-size: 14px;
+}
+
+.shelf__tooltip a {
+    color: darkblue;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 8px;
+}
+
+.shelf__tooltip--x {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+}
