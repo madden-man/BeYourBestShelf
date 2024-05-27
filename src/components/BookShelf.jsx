@@ -3,8 +3,46 @@ import { shelfMap } from './shelfConstants';
 
 import './bookshelf.css';
 
-export const BookShelf = ({ title: shelfTitle, volumeCount, volumes }) => {
+export const BookShelf = ({ title: shelfTitle, volumeCount, volumes, fancyView = true }) => {
     const [activeBook, setActiveBook] = useState({});
+
+    if (volumeCount === 0) {
+        return null;
+    } else if (window.outerWidth < 500) {
+      return (
+        <div style={{display: 'flex', flexDirection: 'column'}}>
+            <h2>{shelfTitle}</h2>
+            {volumes?.map(({ volumeInfo: { title, authors, infoLink }}) => 
+                <a href={infoLink} style={{
+                    color: 'black',
+                    textDecoration: 'underline',
+                    textDecorationColor: '#319ca8',
+                    marginBottom: '4px',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center'
+                }}>
+                    <img src={require('../assets/book.png')} style={{height: '50px', marginRight: '8px'}} />
+                    <span><b>{title}</b><br /> by {authors}</span>
+                </a>)}
+        </div>
+      )  
+    } else if (!fancyView) {
+        return (
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+                <h2>{shelfTitle}</h2>
+                {volumes?.map(({ volumeInfo: { title, authors, infoLink }}) => 
+                    <a href={infoLink} style={{
+                        color: 'black',
+                        textDecoration: 'underline',
+                        textDecorationColor: '#319ca8',
+                        marginBottom: '4px',
+                        cursor: 'pointer',
+                    }}>{title} by {authors}</a>)}
+            </div>
+        )
+    }
 
     const onShelfHover = (e) => {
         const offsetLeft = document.getElementsByClassName('app')?.[0]?.offsetLeft;
@@ -30,7 +68,7 @@ export const BookShelf = ({ title: shelfTitle, volumeCount, volumes }) => {
 
     return (
         <div className="shelf">
-            <h1>{shelfTitle}</h1>
+            <h2>{shelfTitle}</h2>
             <img
                 src={require(`../assets/shelf__${volumeCount}.png`)}
                 alt="bookshelf map"
